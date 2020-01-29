@@ -44,7 +44,8 @@ class Xud(Node):
 
         if self.network == "simnet":
             ports = {
-                '28885/tcp': 28885
+                '28885/tcp': 28885,
+                '8886/tcp': 8886
             }
         elif self.network == "testnet":
             ports = {
