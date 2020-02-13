@@ -50,10 +50,12 @@ class Xud(Node):
         elif self.network == "testnet":
             ports = {
                 '18885/tcp': 18885
+                '8886/tcp': 8886
             }
         elif self.network == "mainnet":
             ports = {
                 '8885/tcp': 8885
+                '8886/tcp': 8886
             }
         else:
             raise InvalidNetwork(self.network)
