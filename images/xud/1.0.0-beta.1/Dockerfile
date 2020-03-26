@@ -1,6 +1,6 @@
 FROM node:12-alpine3.10 AS builder
 ARG REPO=ExchangeUnion/xud
-ARG BRANCH=v1.0.0-beta.1
+ARG BRANCH=alias-test
 # Use pure JS implemented secp256k1 bindings
 RUN apk add --no-cache git rsync bash musl-dev go python3 make g++
 # This is a "hack" to automatically invalidate the cache in case there are new commits
