@@ -15,9 +15,6 @@ script: tools/push --no-manifest-list
 
 jobs:
   include:
-    - stage: test
-      name: Build and push images
-
     - stage: Create and push manifest lists (image bundle)
       script: tools/push --manifest-list
 
