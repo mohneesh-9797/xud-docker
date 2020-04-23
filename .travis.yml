@@ -1,9 +1,10 @@
-arch:
-  - amd64
-  - arm64
+
 jobs:
   include:
     - stage: Build and push images
+      arch:
+        - amd64
+        - arm64
       language: python
       python:
         - "3.8"
