@@ -15,6 +15,20 @@ jobs:
         - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
         - pip install -r requirements-dev.txt
       script: tools/push --no-manifest-list
+    - stage: Build images (arrm64)
+      language: python
+      python:
+        - "3.8"
+      arch:
+        - arm64
+      git:
+        depth: false
+      services:
+        - docker
+      before_script:
+        - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+        - pip install -r requirements-dev.txt
+      script: tools/push --no-manifest-list
     - stage: Create and push manifest lists
       script: tools/push --manifest-list
     - stage: Test common cases
