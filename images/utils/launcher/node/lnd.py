@@ -45,7 +45,7 @@ class Lnd(Node):
             return [
                 "--debuglevel=debug",
                 "--noseedbackup",
-                "--nobootstrap",
+                #"--nobootstrap",
                 "--minbackoff=30s",
                 "--maxbackoff=24h",
                 "--bitcoin.active",
