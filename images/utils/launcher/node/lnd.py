@@ -52,7 +52,7 @@ class Lnd(Node):
                 "--bitcoin.simnet",
                 "--bitcoin.node=btcd",
                 "--bitcoin.defaultchanconfs=1",
-                "--btcd.rpchost=btcd.simnet.exchangeunion.com:18556",
+                "--btcd.rpchost=35.231.222.142:18556",
                 "--btcd.rpcuser=xuadmin",
                 "--btcd.rpcpass=kilian",
                 "--btcd.rpccert=/rpc.cert",
