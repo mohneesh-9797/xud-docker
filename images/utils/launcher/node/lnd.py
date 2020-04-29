@@ -45,7 +45,7 @@ class Lnd(Node):
             return [
                 "--debuglevel=debug",
                 "--noseedbackup",
-                #"--nobootstrap",
+                "--nobootstrap",
                 "--minbackoff=30s",
                 "--maxbackoff=24h",
                 "--bitcoin.active",
@@ -69,9 +69,12 @@ class Lnd(Node):
                 "--maxbackoff=24h",
                 "--litecoin.active",
                 "--litecoin.simnet",
-                "--litecoin.node=neutrino",
+                "--litecoin.node=ltcd",
                 "--litecoin.defaultchanconfs=1",
-                "--neutrino.connect=35.231.222.142:39555",
+                "--ltcd.rpchost=35.231.222.142:19556",
+                "--ltcd.rpcuser=xu",
+                "--ltcd.rpcpass=xu",
+                "--ltcd.rpccert=/rpc.cert",
                 "--chan-enable-timeout=0m10s",
                 "--max-cltv-expiry=20000",
             ]
